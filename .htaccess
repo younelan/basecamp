@@ -1,0 +1,10 @@
+RewriteEngine on
+
+# Return 404 for requests to .git folder
+RewriteRule ^\.git/ - [L,R=404]
+
+# Return 404 for requests to any folder named 'private'
+RewriteRule private - [L,R=404]
+RewriteRule backend - [L,R=404]
+
+
