@@ -8,5 +8,5 @@ vendor/opensitez/simplicity - simplicity framework goes here
 
 - checkout 
     - [Simplicity Repo](https://github.com/younelan/simplicity) for more details
-    - [Simplicity Demos](https://github.com/younelan.com/simplicitydemos) for demos
+    - [Simplicity Demos](https://github.com/younelan/simplicitydemos) for demos
 
