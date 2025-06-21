@@ -1,0 +1,26 @@
+{
+    "name": "opensitez/basecamp",
+    "description": "Base Camp is a basic simplicity framework project which requires the simplicity framework",
+    "type": "project",
+    "license": "See License file",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/younelan/Simplicity"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+        }
+    },
+    "authors": [
+        {
+            "name": "Youness El Andaloussi",
+            "email": "youness@elandaloussi.net"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "opensitez/simplicity": "dev-master",
+    }
+}
