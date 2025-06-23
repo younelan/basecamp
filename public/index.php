@@ -3,9 +3,7 @@ $backend_dir = dirname(__DIR__) . "/backend";
 require_once("$backend_dir/init.php");
 
 
-
-$main = $handler->get_plugin("basecamp");
-
+$main = $framework->get_plugin("block");
 /*
 $auth = $handler->get_plugin("auth");
 $auth->on_init_web();
@@ -16,10 +14,15 @@ if ($auth) {
 }
 */
 
+$site = [ "routes" => [ "default"=> ["type"=>"block","content"=>"Hello World"] ] ];
+
+$framework->load_external_plugins($external_plugin_paths);
+$config_object->set("site",$site);
+
 $app = [
-  'page' => $_REQUEST['page'] ?? $config['defaultpage'] ?? "",
-  'plugin' => $_REQUEST['plugin'] ?? $config['defaultplugin'] ?? "",
-  'action' => $_REQUEST['action'] ?? ""
+  "content" => "Hello",
+  'type' =>'block',
+  'content' => "Hello world"
 ];
 
-$main->on_web_page($app);
+print $main->render($app);
