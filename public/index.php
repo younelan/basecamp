@@ -3,9 +3,9 @@ $backend_dir = dirname(__DIR__) . "/backend";
 require_once("$backend_dir/init.php");
 
 
-$main = $framework->get_plugin("block");
+$main = $framework->get_component("block");
 /*
-$auth = $handler->get_plugin("auth");
+$auth = $framework->get_component("auth");
 $auth->on_init_web();
 if ($auth) {
   $auth->require_login();
