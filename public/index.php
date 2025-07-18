@@ -16,7 +16,7 @@ if ($auth) {
 
 $site = [ "routes" => [ "default"=> ["type"=>"block","content"=>"Hello World"] ] ];
 
-$framework->load_external_plugins($external_plugin_paths);
+$framework->load_external_components($external_component_paths);
 $config_object->set("site",$site);
 
 $app = [

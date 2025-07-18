@@ -14,7 +14,7 @@ $config['paths'] = [
    'base' => dirname(__DIR__),
    'datafolder' => __DIR__ . "/data",
    'backend' => __DIR__,
-   'plugins' => dirname(__FILE__) . "/plugins",
+   'components' => dirname(__FILE__) . "/components",
 ];
 // Load configuration
 $config_object = new Config($config);
@@ -24,17 +24,17 @@ $config_object = new Config($config);
 $framework = new Framework($config_object);
 
 
-$external_plugin_paths = [
+$external_component_paths = [
     [
         'group' => 'app',
-        'path' => dirname(__DIR__) . '/backend/plugins',
-        'namespace' => 'cto\\plugins'
+        'path' => dirname(__DIR__) . '/backend/components',
+        'namespace' => 'cto\\components'
     ],
     [
         'group' => 'local',
-        'path' => dirname(__DIR__) . '/local/plugins',
-        'namespace' => 'App\\Plugins'
+        'path' => dirname(__DIR__) . '/local/components',
+        'namespace' => 'App\\Components'
     ]
 ];
 
-$framework->load_external_plugins($external_plugin_paths);
+$framework->load_external_components($external_component_paths);
